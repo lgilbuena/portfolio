@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/portoflio/static/css/main.024b2589.css",
+    "main.js": "/portoflio/static/js/main.acdc9e8c.js",
+    "static/js/453.ace21015.chunk.js": "/portoflio/static/js/453.ace21015.chunk.js",
+    "static/media/Miracode.ttf": "/portoflio/static/media/Miracode.81db29bc65b738dda4d2.ttf",
+    "static/media/space.jpg": "/portoflio/static/media/space.2dc25aeea5cf23161c74.jpg",
+    "index.html": "/portoflio/index.html",
+    "main.024b2589.css.map": "/portoflio/static/css/main.024b2589.css.map",
+    "main.acdc9e8c.js.map": "/portoflio/static/js/main.acdc9e8c.js.map",
+    "453.ace21015.chunk.js.map": "/portoflio/static/js/453.ace21015.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.024b2589.css",
+    "static/js/main.acdc9e8c.js"
+  ]
+}
