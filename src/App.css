@@ -1,38 +1,270 @@
-.App {
-  text-align: center;
+
+
+@font-face{
+  font-family: 'Miracode';
+  src: local('Miracode'), url(C:\Users\jolog\OneDrive\Desktop\code\luis-gilbuena\portfolio\src\fonts\Miracode.ttf) format('opentype');
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  font-family: 'Miracode';
+  --normal-font: 400;
+  --bold-font: 700;
+  --bolder-font: 900;
+  --bg-color: #fcfcfc;
+  --primary-color: #65737e;
+  --secondary-color: #c0c5ce;
+  --primary-shadow: #8b8eaf;
+  --secondary-shadow: #a17a69;
+  --bottom-margin: 0.5rem;
+  --bottom-margin-2: 1rem;
+  --line-height: 1.7rem;
+  --transition: 0.3s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+html {
+  scroll-behavior: smooth;
+}
+
+/* CSS Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  position: fixed;
+  width: 100%; /* Make the nav take the full width of the viewport */
+  z-index: 1000; /* Ensure the nav stays on top of other content */
+  top: 10vh;
+  user-select: none;
+  animation: fadeIn 5s;
+}
+
+.bouncy{
+  height:100vh
+}
+
+marquee{
+  height: 100vh;
+  animation: fadeIn 7s
+}
+
+.homepage{
+  display: inline-block;
+  justify-content: center;
+}
+
+.homepage-container {
+  position: fixed;
+  left: 25%;
+  right: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ensure the section takes the full viewport height */
+  animation: moveToTop 1s forwards;
+  animation-delay: 2s; 
+}
+.introduction{
+  font-family: Miracode;
+  font-size: 5em;
+  letter-spacing: 8px;
+  border-right: 5px solid;
+  white-space: nowrap;
+  width: 100%;
+  color: #c0c5ce;
+  border-color: #c0c5ce;
+  white-space: nowrap;
+  overflow: hidden;
+  user-select: none;
+  animation:
+    typing 2s steps(14),
+    cursor .4s step-end infinite alternate;
+}
+
+.introduction:hover{
+  color: #65737e;
+  border-color: #65737e;
+}
+
+.subtext-intro{
+  text-align: right;
+  display: block;
+  width: 100%;
+  letter-spacing: 5px;
+  white-space: nowrap;
+  border-color: white;
+  overflow: hidden;
+  animation: fadeIn 5s;
+  text-align: right;
+}
+
+@keyframes fadeIn{
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+
+@keyframes cursor{
+  50% {border-color: transparent}
+}
+
+@keyframes typing{
+  from {width: 0}
+}
+
+@keyframes moveToTop{
+  0%{
+    transform: translateY(0);
+  }
+  100%{
+    transform: translateY(-44vh);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.navigation{
+  display:flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  list-style-type: none;
+}
+
+li{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  margin-left: 5px;
+}
+
+a:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+body {
+  font-family: Miracode;
+  background-image: url('./images/space.jpg');
+  background-attachment: fixed;
+}
+
+.aboutme{
+  padding-top: 8%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.myskills{
+  padding-top: 8%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.mycontacts{
+  padding-top: 8%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+h2{
+  color: white;
+}
+p{
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+section{
+  height: 100vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+*::-webkit-scrollbar{
+  display:none
+}
+
+* {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
+.stars{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.star{
+  position:absolute;
+  top: -50px; /* Adjust the starting position of the stars */
+  right: 0;
+  transform: rotateZ(45deg);
+}
+
+.star:nth-child(2){
+  right:100px
+}
+.star:nth-child(2) span{
+  animation-delay: 1s;
+}
+
+.star:nth-child(3){
+  right:450px
+}
+.star:nth-child(3) span{
+  animation-delay: 2s;
+}
+
+.star:nth-child(4){
+  right:-150px
+}
+.star:nth-child(4) span{
+  animation-delay: 3s;
+}
+
+.star:nth-child(5){
+  right:-450px
+}
+.star:nth-child(5) span{
+  animation-delay: 4s;
+}
+
+.shootingstar{
+  width: 140px;
+  height: 2px;
+  display: block;
+  background-image: linear-gradient(to right, #fff, transparent);
+  margin:50px;
+  margin-bottom:150px;
+  position:relative;
+  animation: shooting 2s linear infinite;
+}
+
+.shootingstar::before{
+  content:"";
+  position:absolute;
+  bottom:-1px;
+  left:-1px;
+  width:5px;
+  height:5px;
+  background-color: #fff;
+  box-shadow: 0 0 6px #fff;
+  border-radius: 50px;
+}
+
+@keyframes shooting{
+  0%{
+    transform: translateY(-200px) rotate(-90deg);
+    opacity: 1;
   }
-  to {
-    transform: rotate(360deg);
+  100%{
+    transform: translateY(900px) rotate(-90deg);
+    opacity: 0;
   }
 }
