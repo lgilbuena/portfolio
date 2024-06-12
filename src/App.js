@@ -1,6 +1,9 @@
 import React, { useRef, useState, useEffect } from 'react';
 import './App.css';
 import Timelines from './components/timeline';
+import LangCard from './components/langCard';
+import ToolCard from './components/toolCard';
+import FrameCard from './components/frameCard';
 function App() {
 
 
@@ -13,6 +16,7 @@ function App() {
 
   const currentDate = new Date();
   const birthDate = new Date('2002-07-24');
+  const [skillMode, setSkillMode] = useState();
   const [age, setAge] = useState(calculateAge());
   function calculateAge() {
     const currentDate = new Date();
@@ -31,7 +35,27 @@ function App() {
     return () => clearInterval(interval);
   }, []); 
 
-  
+  function handleSkillClick(num){
+    setSkillMode(num);
+  }
+
+  function closeOut(){
+    setSkillMode(0);
+  }
+
+  const renderCard = () =>{
+    switch(skillMode){
+      case 0:
+        return null
+      case 1:
+        return <LangCard func={closeOut}/>
+      case 2:
+        return <ToolCard func={closeOut}/>
+      case 3:
+        return <FrameCard func={closeOut}/>
+     }
+   
+}
 
   return (
     <div>
@@ -72,7 +96,8 @@ function App() {
       </section>
       <section id="skills" className='myskills'>
         <h2>Skills</h2>
-        <p>Content for the Skills section...</p>
+        <p style={{zIndex: 2}}>During my time at the University of Connecticut, I've learned several <span className='pgrmskill' onClick={() => handleSkillClick(1)}>programming languages</span>, <span className='toolskill' onClick={() => handleSkillClick(2)}>tools</span>, and <span className='frameskill' onClick={() => handleSkillClick(3)}>frameworks/methodologies</span>.</p>
+        <div style={{marginTop: 10}}>{renderCard()}</div>
       </section>
       <section id="contact" className='mycontacts'>
         <h2>Contact</h2>
