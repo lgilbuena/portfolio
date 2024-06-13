@@ -34,11 +34,12 @@ html {
 
 nav {
   position: fixed;
-  width: 100%; /* Make the nav take the full width of the viewport */
+  width: 100vw; /* Make the nav take the full width of the viewport */
   z-index: 1000; /* Ensure the nav stays on top of other content */
   top: 10vh;
   user-select: none;
   animation: fadeIn 5s;
+  
 }
 
 .bouncy{
@@ -58,31 +59,31 @@ marquee{
 
 .homepage-container {
   position: fixed;
-  left: 25%;
-  right: 25%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Ensure the section takes the full viewport height */
+  height: 100%; /* Ensure the section takes the full viewport height */
   animation: moveToTop 1s forwards;
   animation-delay: 2s; 
   pointer-events: none;
+  width: 100%;
+  
 }
 .introduction{
   font-family: Miracode;
-  font-size: 5em;
+  font-size: 5vw;
   letter-spacing: 8px;
   border-right: 5px solid;
-  white-space: nowrap;
-  width: 100%;
   color: #c0c5ce;
   border-color: #c0c5ce;
   white-space: nowrap;
   overflow: hidden;
-  user-select: none;
+  height: 10%;
+  width: 100%;
   animation:
     typing 2s steps(14),
     cursor .4s step-end infinite alternate;
+    
 }
 
 .introduction:hover{
@@ -128,7 +129,8 @@ marquee{
   display:flex;
   justify-content: center;
   align-items: center;
-  list-style-type: none;
+  list-style-type: none;  
+  height: 1vw;
 }
 
 li{
@@ -140,6 +142,7 @@ a {
   text-decoration: none;
   color: var(--primary-color);
   margin-left: 5px;
+  font-size: 1.2vw;
 }
 
 a:hover {
@@ -150,28 +153,48 @@ a:hover {
 body {
   font-family: Miracode;
   background-image: url('./images/space.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   background-attachment: fixed;
 }
 
+
 .aboutme{
-  padding-top: 8%;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-top: 9vw;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+.aboutme h2{
+  font-size: 1.5vw;
+}
+
+.aboutme p {
+  font-size: 1vw; /* Adjust font size using viewport units */
 }
 
 .myskills{
-  padding-top: 8%;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-top: 9vw;
+  padding-left: 10vw;
+  padding-right: 10vw;
   z-index: 1;
+}
+
+.myskills h2{
+  font-size: 1.5vw;
+}
+
+.myskills p{
+  font-size: 1vw;
 }
 
 .mycontacts{
   padding-left: 10%;
   padding-right: 10%;
   align-items: center;
+  justify-content: center;
   display: flex;
-  justify-content: flex-start;
 }
 
 .github:hover{

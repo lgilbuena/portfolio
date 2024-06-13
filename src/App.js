@@ -8,6 +8,27 @@ import github from './svgs/icons8-github.svg';
 import gmail from './svgs/icons8-gmail.svg';
 import linkedin from './svgs/icons8-linkedin.svg';
 function App() {
+  
+  const [dimensions, setDimensions] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setDimensions({
+        width: window.innerWidth,
+        height: window.innerHeight
+      });
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   const [refresh,setRefresh] = useState(false)
 
   const homeSectionRef = useRef(null);
@@ -44,6 +65,21 @@ function App() {
     // Cleanup function to clear the interval
     return () => clearInterval(interval);
   }, []); 
+
+  useEffect(() => {
+    const handleResize = () => {
+      setDimensions({
+        width: window.innerWidth,
+        height: window.innerHeight
+      });
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   function handleSkillClick(num){
     setSkillMode(num);
@@ -90,11 +126,11 @@ function App() {
           </div>
         </div>
         <div className='bouncy'>
-          <marquee behavior="alternate" scrollamount="30">
+          {/* <marquee behavior="alternate" scrollamount="30">
             <marquee behavior="alternate" scrollamount="30" direction="down">
               <p>Click on the text at the top to learn more about me!</p>
             </marquee>
-          </marquee>       
+          </marquee>        */}
         </div>
       </section>
       <section id="about" className='aboutme'>
@@ -110,11 +146,10 @@ function App() {
         <div style={{marginTop: 10}}>{renderCard()}</div>
       </section>
       <section id="contact" className='mycontacts'>
-        <a href='https://github.com/lgilbuena' target='_blank'><img src={github} className='github'></img></a>
-        <a href='mailto:jol0private@gmail.com' target='_blank'><img src={gmail} className='gmail'></img></a>
-        <a href='https://www.linkedin.com/in/luis-gilbuena-a9a57b200/' target='_blank' className='linkedin'><img src={linkedin}></img></a>
-        
-
+      <a href='https://github.com/lgilbuena' target='_blank'><img src={github} className="github" style={{ width: dimensions.width * 0.1, height: dimensions.width * 0.1 }} /></a>
+      <a href='mailto:jol0private@gmail.com' target='_blank'><img src={gmail} className="gmail" style={{ width: dimensions.width * 0.1, height: dimensions.width * 0.1 }} /></a>
+      <a href='https://www.linkedin.com/in/luis-gilbuena-a9a57b200/' target='_blank' className='linkedin'><img src={linkedin} className="linkedin" style={{ width: dimensions.width * 0.1, height: dimensions.width * 0.1 }} /></a>
+      
       </section>
     </div>
   );

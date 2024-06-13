@@ -41,61 +41,61 @@ export default function Timelines() {
       clicked?
         <Timeline align="alternate">
         <TimelineItem>
-          <TimelineOppositeContent color='white' fontFamily='Miracode'>
+          <TimelineOppositeContent color='white' fontFamily='Miracode' sx={{fontSize: '1vw'}}>
             August 31, 2020
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineDot />
             <TimelineConnector />
           </TimelineSeparator>
-          <TimelineContent color='white' fontFamily='Miracode' onClick={() => handleClick(0)}>
+          <TimelineContent color='white' fontFamily='Miracode' onClick={() => handleClick(0)} sx={{fontSize: '1vw'}}>
             Enrolled into the University of Connecticut
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
-          <TimelineOppositeContent color='white' fontFamily='Miracode'>
+          <TimelineOppositeContent color='white' fontFamily='Miracode' sx={{fontSize: '1vw'}}>
             September 14, 2022 - May 4, 2024
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineDot />
             <TimelineConnector />
           </TimelineSeparator>
-          <TimelineContent color='white' fontFamily='Miracode' onClick={() => handleClick(1)}>
+          <TimelineContent color='white' fontFamily='Miracode' onClick={() => handleClick(1)} sx={{fontSize: '1vw'}}>
             Hired as a tutor for the College of Engineering
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
-          <TimelineOppositeContent color='white' fontFamily='Miracode'>
+          <TimelineOppositeContent color='white' fontFamily='Miracode' sx={{fontSize: '1vw'}}>
             June 5, 2022 - August 10, 2022
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineDot />
             <TimelineConnector />
           </TimelineSeparator>
-          <TimelineContent color='white' fontFamily='Miracode' onClick={() => handleClick(2)}>
+          <TimelineContent color='white' fontFamily='Miracode' onClick={() => handleClick(2)} sx={{fontSize: '1vw'}}>
             Hired as a Software Engineer Intern
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
-          <TimelineOppositeContent color='white' fontFamily='Miracode'>
+          <TimelineOppositeContent color='white' fontFamily='Miracode' sx={{fontSize: '1vw'}}>
             May 4, 2024
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineDot />
             <TimelineConnector />
           </TimelineSeparator>
-          <TimelineContent color='white' fontFamily='Miracode' onClick={() => handleClick(3)}> 
+          <TimelineContent color='white' fontFamily='Miracode' onClick={() => handleClick(3)} sx={{fontSize: '1vw'}}> 
             Graduated from the University of Connecticut
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
-          <TimelineOppositeContent color='white' fontFamily='Miracode'>
+          <TimelineOppositeContent color='white' fontFamily='Miracode' sx={{fontSize: '1vw'}}>
             ???
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineDot />
           </TimelineSeparator>
-          <TimelineContent color='white' fontFamily='Miracode'>
+          <TimelineContent color='white' fontFamily='Miracode' sx={{fontSize: '1vw'}}>
             ???
           </TimelineContent>
         </TimelineItem>
