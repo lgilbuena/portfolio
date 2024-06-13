@@ -36,7 +36,7 @@ export default function LangCard({func}) {
                     </li>
                     <li style={{fontWeight:'bold'}}>JavaScript Projects:
                         <li><a href='https://github.com/lgilbuena/passwordgenerator' target="_blank">Password Generator</a></li>
-                        <li><a href='https://github.com/brodheadw/careless-credit' target="_blank">Credit Card matcher</a></li>
+                        <li>Credit Card matcher</li>
                         <li><a href='https://github.com/lgilbuena/portfolio' target="_blank">My portfolio!</a></li>
                     </li>
                     <li style={{fontWeight:'bold'}}>Java</li>                   

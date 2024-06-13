@@ -4,8 +4,11 @@ import Timelines from './components/timeline';
 import LangCard from './components/langCard';
 import ToolCard from './components/toolCard';
 import FrameCard from './components/frameCard';
+import github from './svgs/icons8-github.svg';
+import gmail from './svgs/icons8-gmail.svg';
+import linkedin from './svgs/icons8-linkedin.svg';
 function App() {
-
+  const [refresh,setRefresh] = useState(false)
 
   const homeSectionRef = useRef(null);
 
@@ -24,6 +27,13 @@ function App() {
     const ageInYears = differenceInMilliseconds / (1000 * 60 * 60 * 24 * 365);
     return ageInYears.toFixed(10); // Rounded to 10 decimal points
   }
+
+  useEffect(()=>{
+    if (!refresh){
+      scrollToHomeSection()
+      setRefresh(true)
+    }
+  })
 
   useEffect(() => {
     // Update the age every second
@@ -100,8 +110,11 @@ function App() {
         <div style={{marginTop: 10}}>{renderCard()}</div>
       </section>
       <section id="contact" className='mycontacts'>
-        <h2>Contact</h2>
-        <p>Content for the Contact section...</p>
+        <a href='https://github.com/lgilbuena' target='_blank'><img src={github} className='github'></img></a>
+        <a href='mailto:jol0private@gmail.com' target='_blank'><img src={gmail} className='gmail'></img></a>
+        <a href='https://www.linkedin.com/in/luis-gilbuena-a9a57b200/' target='_blank' className='linkedin'><img src={linkedin}></img></a>
+        
+
       </section>
     </div>
   );

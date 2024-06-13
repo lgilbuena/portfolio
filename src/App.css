@@ -167,9 +167,23 @@ body {
 }
 
 .mycontacts{
-  padding-top: 8%;
   padding-left: 10%;
   padding-right: 10%;
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.github:hover{
+  filter: invert(50%) sepia(100%) saturate(500%) hue-rotate(180deg);
+}
+
+.gmail:hover{
+  filter: invert(50%) sepia(100%) saturate(500%) hue-rotate(180deg);
+}
+
+.linkedin:hover{
+  filter: invert(50%) sepia(100%) saturate(500%) hue-rotate(180deg);
 }
 
 h2{
