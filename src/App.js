@@ -147,7 +147,7 @@ function App() {
       </section>
       <section id="contact" className='mycontacts'>
       <a href='https://github.com/lgilbuena' target='_blank'><img src={github} className="github" style={{ width: dimensions.width * 0.1, height: dimensions.width * 0.1 }} /></a>
-      <a href='mailto:jol0private@gmail.com' target='_blank'><img src={gmail} className="gmail" style={{ width: dimensions.width * 0.1, height: dimensions.width * 0.1 }} /></a>
+      <a href='mailto:luisjoseph.gilbuena@gmail.com' target='_blank'><img src={gmail} className="gmail" style={{ width: dimensions.width * 0.1, height: dimensions.width * 0.1 }} /></a>
       <a href='https://www.linkedin.com/in/luis-gilbuena-a9a57b200/' target='_blank' className='linkedin'><img src={linkedin} className="linkedin" style={{ width: dimensions.width * 0.1, height: dimensions.width * 0.1 }} /></a>
       
       </section>
